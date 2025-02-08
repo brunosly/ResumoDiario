@@ -28,9 +28,13 @@ jobs:
         run: |
           python your_script.py
 
-      - name: Generate Index Page
+      - name: Generate mkdocs 
         run: |
           python GenerateIndex.py
+
+      -name: Build mkdocs in html
+        run: |
+          mkdocs build
 
       - name: Commit and push changes
         run: |
